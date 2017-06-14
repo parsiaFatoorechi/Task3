@@ -15,7 +15,6 @@ java.io.FileInputStream;
 java.io.FileNotFoundException;
 java.io.FileOutputStream;
 java.io.IOException;
-java.io.InputStream;
 java.io.ObjectInputStream;
 java.io.ObjectOutputStream;
 java.io.Serializable;

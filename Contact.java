@@ -18,23 +18,21 @@ public class Contact implements Comparable<Contact>, Serializable {
     /**
      * Default Constructor for Contact.
      */
-    public Contact() {
+    public Contact(String lastName) {
     }
 
     /**
      * Parameterized Constructor for Contact is not needed.
      */
-    /*
     public Contact(String firstName, String lastName, String streetAddress,
-        String email, int phone, String notes) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.streetAddress = streetAddress;
-        this.email = email;
-        this.phone = phone;
-        this.notes = notes;
-    }
-    */
+        String email, String phone, String notes) { 
+        this.firstName = firstName; 
+        this.lastName = lastName; 
+        this.streetAddress = streetAddress; 
+        this.email = email; 
+        this.phone = phone; 
+        this.notes = notes; 
+    }   
 
     // Sets the first name of this contact.
     public void setFirstName(String firstName) {
@@ -104,15 +102,19 @@ public class Contact implements Comparable<Contact>, Serializable {
     }
 
     /**
-     * Returns the value of less than, equal to or greater than.
+     * Compares the last names of two contacts for order. If their last names
+     * are equal, their first names are used for comparison. Otherwise, their
+     * last names are used.
+     * 
+     * Returns a negative integer, zero, or a positive integer as this contact
+     * is less than, equal to, or greater than the other contact.
      */
     public int compareTo(Contact other) {
-        return 0;
-
-        /*
-         * int result = lastName.compareTo(other.lastName); if (result == 0) {
-         * return firstName.compareTo(other.firstName); } else { return result;
-         * }
-         */
+        int result = lastName.compareTo(other.lastName);
+        if (result == 0) {
+            return firstName.compareTo(other.firstName);
+        } else {
+            return result;
+        }
     }
 }

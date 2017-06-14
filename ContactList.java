@@ -58,8 +58,7 @@ class ContactList {
     }
 
     /**
-     * Saves to a data file on the File containing all of the current contacts
-     * when the user quits the program.
+     * Saves to a data file on the File containing all of the current contacts.
      */
     public void saveToFile() {
     }

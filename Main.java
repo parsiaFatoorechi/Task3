@@ -28,6 +28,13 @@ public class Main {
         System.out.println("Phone number: " + contact.getPhone()); 
         System.out.println("Notes: " + contact.getNotes()); 
         
+        //Calls the toString() implicitly 
+        System.out.println("Here're the entered information: " + contact);
+        
+        // Compares two objects 
+        System.out.println("Here're the comparison of two objects: " 
+                           + contact.getLastName().compareTo(contact.getLastName()));
+        
         /**
          * Constructs a new ContactList object.
          */
@@ -71,6 +78,8 @@ Street address:
 Email: 
 Phone number: 
 Notes: 
+Here're the entered information: 
+Here're the comparison of two objects: 0
 
 
 end of program

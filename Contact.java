@@ -16,13 +16,19 @@ public class Contact implements Comparable<Contact>, Serializable {
     private String notes;
 
     /**
-     * Default Constructor for Contact. 
+     * Default Constructor for Contact.
+     */
+    public Contact() {
+    }
+    
+    /**
+     * Constructor for Contact with only one parameter lastName.
      */
     public Contact(String lastName) {
     }
 
     /**
-     * Parameterized Constructor for Contact.
+     * Parameterized Constructor for Contact with all parameters.
      */
     public Contact(String firstName, String lastName, String streetAddress,
         String email, String phone, String notes) { 

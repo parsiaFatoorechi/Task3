@@ -1,14 +1,12 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
- * Creates two Contact objects. Prints the list to show that both got into
- * the list. 
+ * Creates two Contact objects to the ContactList. Prints the ContactList to
+ * show that both got into the list. If last name is missing, the Contact object
+ * will not be entered to the ContactList.
  */
-
 public class TestUseCase1 {
     public static void main(String[] args) {
-
         /**
          * Constructs a new ContactList object.
          */
@@ -18,12 +16,13 @@ public class TestUseCase1 {
          * Constructs a new Contact object
          */
         Contact contact = new Contact();
-        
-        // Gets input from the user 
-        System.out.println("Please enter the following information to create a new contact:");
+
+        // Gets input from the user
+        System.out.println(
+                "Please enter the following information:\n");
         contact.setLastName("Maier");
         contact.setFirstName("Vincent");
-        contact.setStreetAddress("");
+        contact.setStreetAddress(""); 
         contact.setEmail("brimo1992@gmail.com");
         contact.setPhone("650-315-7177");
         contact.setNotes("His birthday is January 15.");
@@ -35,14 +34,15 @@ public class TestUseCase1 {
         System.out.println("Phone Number:         " + contact.getPhone());
         System.out.println("Notes:                " + contact.getNotes() + "\n");
 
-        // Adds the new contact to the list. If user did not enter last name,
-        // the Contact object cannot be created to the list.
-        System.out.println("\nThe first contact has been created to the contact list as below:");
-        if ( contact.getLastName() != "" ) {
-            contactList.addContact(contact);
+        // Adds the new Contact object to the ContactList and prints to console
+        // if last name has been entered.  
+        if ( contact.getLastName() != "" ) { 
+            System.out.println( 
+                    "Below new contact has been created to the contact list:\n");
+            contactList.addContact(contact); 
         }  else {
-            System.out.println(
-                    "The contact is not saved due to missing the last name.");
+            System.out.println( 
+                    "Your contact cannot be saved without a last name");
         }
 
         /**
@@ -51,7 +51,8 @@ public class TestUseCase1 {
         Contact contact1 = new Contact();
 
         // Gets input from the user 
-        System.out.println("\nPlease enter the following information to create a new contact:");
+        System.out.println(
+                "\nPlease enter the following information:\n");
         contact1.setLastName("Maclean");
         contact1.setFirstName("Bob");
         contact1.setStreetAddress("15 Baker Street, Chico, CA");
@@ -66,20 +67,21 @@ public class TestUseCase1 {
         System.out.println("Phone Number:         " + contact1.getPhone());
         System.out.println("Notes:                " + contact1.getNotes() + "\n");
 
-        // Adds the new contact to the list. If user did not enter last name,
-        // the Contact object cannot be created to the list.
-        System.out.println("\nThe second contact has been created to the contact list as below:");
-        if ( contact1.getLastName() != "" ) {
-            contactList.addContact(contact1);
+        // Adds the new Contact object to the ContactList and prints to console
+        // if last name has been entered.  
+        if ( contact1.getLastName() != "" ) { 
+            System.out.println( 
+                    "Below new contact has been created to the contact list:\n");
+            contactList.addContact(contact1); 
         }  else {
-            System.out.println(
-                    "The contact is not saved due to missing the last name.");
+            System.out.println( 
+                    "Your contact cannot be saved without a last name");
         }
 
         /**
          * Prints all Contact objects from the list.
          */
-        System.out.println("\n\nHere is the contact list with all contacts:");
+        System.out.println("\n\nHere is the contact list with all contacts:\n");
         if ( contact.getLastName() != "" ) {
             contactList.addContact(contact);
         }
@@ -93,7 +95,8 @@ public class TestUseCase1 {
 
 /*
  * OUTPUT
-Please enter the following information to create a new contact:
+Please enter the following information:
+
 Last Name (required): Maier
 First Name:           Vincent
 Address:              
@@ -101,9 +104,9 @@ Email:                brimo1992@gmail.com
 Phone Number:         650-315-7177
 Notes:                His birthday is January 15.
 
+Below new contact has been created to the contact list:
 
-The first contact has been created to the contact list as below:
-Name:                 Vincent Maier
+Name:                 Maier, Vincent
 Address:              
 Email:                brimo1992@gmail.com
 Phone Number:         650-315-7177
@@ -111,7 +114,8 @@ Notes:                His birthday is January 15.
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Please enter the following information to create a new contact:
+Please enter the following information:
+
 Last Name (required): Maclean
 First Name:           Bob
 Address:              15 Baker Street, Chico, CA
@@ -119,9 +123,9 @@ Email:                bobmcln@zombie.com
 Phone Number:         650-344-8927
 Notes:                This guy makes great lasagna.
 
+Below new contact has been created to the contact list:
 
-The second contact has been created to the contact list as below:
-Name:                 Bob Maclean
+Name:                 Maclean, Bob
 Address:              15 Baker Street, Chico, CA
 Email:                bobmcln@zombie.com
 Phone Number:         650-344-8927
@@ -131,14 +135,15 @@ Notes:                This guy makes great lasagna.
 
 
 Here is the contact list with all contacts:
-Name:                 Vincent Maier
+
+Name:                 Maier, Vincent
 Address:              
 Email:                brimo1992@gmail.com
 Phone Number:         650-315-7177
 Notes:                His birthday is January 15.
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Name:                 Bob Maclean
+Name:                 Maclean, Bob
 Address:              15 Baker Street, Chico, CA
 Email:                bobmcln@zombie.com
 Phone Number:         650-344-8927

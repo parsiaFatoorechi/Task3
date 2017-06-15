@@ -36,6 +36,8 @@ class ContactList {
      * Add a new Contact object to the Contactlist.
      */
     public void addContact(Contact newContact) {
+        System.out.println(newContact);
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
     }
 
     /**
@@ -43,8 +45,8 @@ class ContactList {
      * sorting is case insensitive.
      */
     public String toString() {
+     // add sort()
         return "";
-        // add sort()
     }
 
     /**
@@ -61,5 +63,4 @@ class ContactList {
      */
     public void saveToFile() {
     }
-
 }

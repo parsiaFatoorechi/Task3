@@ -35,9 +35,15 @@ public class TestUseCase1 {
         System.out.println("Phone Number:         " + contact.getPhone());
         System.out.println("Notes:                " + contact.getNotes() + "\n");
 
-        // Adds the new contact to the ContactList, and prints it out immediately. 
+        // Adds the new contact to the list. If user did not enter last name,
+        // the Contact object cannot be created to the list.
         System.out.println("\nThe first contact has been created to the contact list as below:");
-        contactList.addContact(contact);
+        if ( contact.getLastName() != "" ) {
+            contactList.addContact(contact);
+        }  else {
+            System.out.println(
+                    "The contact is not saved due to missing the last name.");
+        }
 
         /**
          * Constructs a second Contact object.
@@ -60,16 +66,27 @@ public class TestUseCase1 {
         System.out.println("Phone Number:         " + contact1.getPhone());
         System.out.println("Notes:                " + contact1.getNotes() + "\n");
 
-        // Adds the new contact to the ContactList, and prints it out immediately.
+        // Adds the new contact to the list. If user did not enter last name,
+        // the Contact object cannot be created to the list.
         System.out.println("\nThe second contact has been created to the contact list as below:");
-        contactList.addContact(contact1);
+        if ( contact1.getLastName() != "" ) {
+            contactList.addContact(contact1);
+        }  else {
+            System.out.println(
+                    "The contact is not saved due to missing the last name.");
+        }
 
         /**
          * Prints all Contact objects from the list.
          */
         System.out.println("\n\nHere is the contact list with all contacts:");
-        contactList.addContact(contact);
-        contactList.addContact(contact1);
+        if ( contact.getLastName() != "" ) {
+            contactList.addContact(contact);
+        }
+        if ( contact1.getLastName() != "" ) {
+            contactList.addContact(contact1);
+        }
+        
     }
 }
 

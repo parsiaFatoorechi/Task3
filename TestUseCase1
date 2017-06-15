@@ -3,84 +3,131 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Creates a Contact object. Tests class ContactList by calling all methods on a
- * ContactList object.
+ * Creates two Contact objects. Prints the list to show that both got into
+ * the ContactList. 
  */
 
-public class Main {
+public class TestUseCase1 {
     public static void main(String[] args) {
-        /**
-         * Constructs a new Contact object and calls all methods defined in
-         * class Contact.
-         */
-        Contact contact = new Contact();
-        contact.setFirstName("");
-        contact.setLastName("");
-        contact.setStreetAddress("");
-        contact.setEmail("");
-        contact.setPhone("");
-        contact.setNotes("");
 
-        System.out.println("First name: " + contact.getFirstName());
-        System.out.println("Last name: " + contact.getLastName());
-        System.out.println("Street address: " + contact.getStreetAddress());
-        System.out.println("Email: " + contact.getEmail());
-        System.out.println("Phone number: " + contact.getPhone()); 
-        System.out.println("Notes: " + contact.getNotes()); 
-        
-        //Calls the toString() implicitly 
-        System.out.println("Here're the entered information: " + contact);
-        
-        // Compares two objects 
-        System.out.println("Here're the comparison of two objects: " 
-                           + contact.getLastName().compareTo(contact.getLastName()));
-        
         /**
          * Constructs a new ContactList object.
          */
         ContactList contactList = new ContactList();
-        
-        /**
-         * Load contact list from file. 
-         */
-        contactList.loadContactsFromFile(); 
 
         /**
-         * Add a new Contact object to the Contactlist.
+         * Constructs a new Contact object
          */
+        Contact contact = new Contact();
+        
+        // Gets input from the user 
+        System.out.println("Please enter the following information to create a new contact:");
+        contact.setLastName("Maier");
+        contact.setFirstName("Vincent");
+        contact.setStreetAddress("");
+        contact.setEmail("brimo1992@gmail.com");
+        contact.setPhone("650-315-7177");
+        contact.setNotes("His birthday is January 15.");
+
+        System.out.println("Last Name (required): " + contact.getLastName());
+        System.out.println("First Name:           " + contact.getFirstName());
+        System.out.println("Address:              " + contact.getStreetAddress());
+        System.out.println("Email:                " + contact.getEmail());
+        System.out.println("Phone Number:         " + contact.getPhone());
+        System.out.println("Notes:                " + contact.getNotes() + "\n");
+
+        // Adds the new contact to the ContactList, and prints it out immediately. 
+        System.out.println("\nThe first contact has been created to the contact list as below:");
         contactList.addContact(contact);
 
         /**
-         * Prints the entire contact list.
+         * Constructs a second Contact object.
          */
-        System.out.println(contactList); // call the toString() implicitly
+        Contact contact1 = new Contact();
+
+        // Gets input from the user 
+        System.out.println("\nPlease enter the following information to create a new contact:");
+        contact1.setLastName("Maclean");
+        contact1.setFirstName("Bob");
+        contact1.setStreetAddress("15 Baker Street, Chico, CA");
+        contact1.setEmail("bobmcln@zombie.com");
+        contact1.setPhone("650-344-8927");
+        contact1.setNotes("This guy makes great lasagna.");
+        
+        System.out.println("Last Name (required): " + contact1.getLastName());
+        System.out.println("First Name:           " + contact1.getFirstName());
+        System.out.println("Address:              " + contact1.getStreetAddress());
+        System.out.println("Email:                " + contact1.getEmail());
+        System.out.println("Phone Number:         " + contact1.getPhone());
+        System.out.println("Notes:                " + contact1.getNotes() + "\n");
+
+        // Adds the new contact to the ContactList, and prints it out immediately.
+        System.out.println("\nThe second contact has been created to the contact list as below:");
+        contactList.addContact(contact1);
 
         /**
-         * Retrieves a person's information by last name.
+         * Prints all Contact objects from the list.
          */
-        System.out.println(contactList.searchByLastName(""));
-
-        /**
-         * Saves the data to the File containing all of the current contacts
-         * when the user quits the program.
-         */
-        contactList.saveToFile();
-
-        System.out.println("end of program");
+        System.out.println("\n\nHere is the contact list with all contacts:");
+        contactList.addContact(contact);
+        contactList.addContact(contact1);
     }
 }
 
+
 /*
  * OUTPUT
-First name: 
-Last name: 
-Street address: 
-Email: 
-Phone number: 
-Notes: 
-Here're the entered information: 
-Here're the comparison of two objects: 0
+Please enter the following information to create a new contact:
+Last Name (required): Maier
+First Name:           Vincent
+Address:              
+Email:                brimo1992@gmail.com
+Phone Number:         650-315-7177
+Notes:                His birthday is January 15.
 
 
-end of program
+The first contact has been created to the contact list as below:
+Name:                 Vincent Maier
+Address:              
+Email:                brimo1992@gmail.com
+Phone Number:         650-315-7177
+Notes:                His birthday is January 15.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Please enter the following information to create a new contact:
+Last Name (required): Maclean
+First Name:           Bob
+Address:              15 Baker Street, Chico, CA
+Email:                bobmcln@zombie.com
+Phone Number:         650-344-8927
+Notes:                This guy makes great lasagna.
+
+
+The second contact has been created to the contact list as below:
+Name:                 Bob Maclean
+Address:              15 Baker Street, Chico, CA
+Email:                bobmcln@zombie.com
+Phone Number:         650-344-8927
+Notes:                This guy makes great lasagna.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Here is the contact list with all contacts:
+Name:                 Vincent Maier
+Address:              
+Email:                brimo1992@gmail.com
+Phone Number:         650-315-7177
+Notes:                His birthday is January 15.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Name:                 Bob Maclean
+Address:              15 Baker Street, Chico, CA
+Email:                bobmcln@zombie.com
+Phone Number:         650-344-8927
+Notes:                This guy makes great lasagna.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
  */

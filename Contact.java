@@ -25,6 +25,7 @@ public class Contact implements Comparable<Contact>, Serializable {
      * Constructor for Contact with only one parameter lastName.
      */
     public Contact(String lastName) {
+        this.lastName = lastName;
     }
 
     /**
@@ -103,10 +104,15 @@ public class Contact implements Comparable<Contact>, Serializable {
     /**
      * Return a String representation of this contact.
      */
-    public String toString() { // Calls getters
-        return "";
+    public String toString() { 
+        return "Name:                 " + firstName + " " + lastName + "\n"
+               + "Address:              " + streetAddress + "\n"
+               + "Email:                " + email + "\n" 
+               + "Phone Number:         " + phone + "\n"
+               + "Notes:                " + notes + "\n";            
     }
-
+    
+    
     /**
      * Compares the last names of two contacts for order. If their last names
      * are equal, their first names are used for comparison. Otherwise, their

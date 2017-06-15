@@ -105,7 +105,7 @@ public class Contact implements Comparable<Contact>, Serializable {
      * Return a String representation of this contact.
      */
     public String toString() { 
-        return "Name:                 " + firstName + " " + lastName + "\n"
+        return "Name:                 " + lastName + ", " + firstName + "\n"
                + "Address:              " + streetAddress + "\n"
                + "Email:                " + email + "\n" 
                + "Phone Number:         " + phone + "\n"

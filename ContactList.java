@@ -33,7 +33,7 @@ class ContactList {
     }
 
     /**
-     * Add a new Contact object to the Contactlist.
+     * Add a new Contact object to the ContactList.
      */
     public void addContact(Contact newContact) {
         System.out.println(newContact);
@@ -41,7 +41,7 @@ class ContactList {
     }
 
     /**
-     * Prints the entire contact list. Sorted by last name, then first name. The
+     * Prints the entire ContactList. Sorted by last name, then first name. The
      * sorting is case insensitive.
      */
     public String toString() {
@@ -63,4 +63,5 @@ class ContactList {
      */
     public void saveToFile() {
     }
+
 }

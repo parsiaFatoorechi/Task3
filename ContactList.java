@@ -1,8 +1,3 @@
-
-/**
- * One object of class ContactList stores the whole list of Contacts.
- */
-
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,16 +8,23 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+/**
+ * One object of class ContactList stores the whole list of Contacts.
+ */
+
 class ContactList {
 
     /* Stores all the contacts */
     private ArrayList<Contact> contacts;
+    private Scanner scanner;
 
     /**
      * Default constructor to initialize the ArrayList of contacts. Calls
      * loadContactsFromFile() to load the contacts from file.
      */
     public ContactList() {
+        contacts = new ArrayList<Contact>();
+        scanner = new Scanner(System.in);
     }
 
     /**
@@ -36,8 +38,47 @@ class ContactList {
      * Add a new Contact object to the ContactList.
      */
     public void addContact(Contact newContact) {
-        System.out.println(newContact);
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        if (newContact != null) {
+            contacts.add(newContact);
+        }
+    }
+
+    /**
+     * Gets input from the user.
+     */
+    public Contact readEntry() {
+        System.out.print("Please enter the following information:" 
+                         + "\nLast Name (required): ");
+        String lastName = scanner.nextLine();
+        String testLastName = lastName.replaceAll(" ", "");
+        if (testLastName.isEmpty()) {
+            System.out.println("\n*** Your contact cannot be saved without a last name ***\n\n\n");
+            return null;
+        } else {
+            Contact newContact = new Contact(lastName);
+            System.out.print("First Name:           ");
+            String firstName = scanner.nextLine();
+            newContact.setFirstName(firstName);
+
+            System.out.print("Address:              ");
+            String streetAddress = scanner.nextLine();
+            newContact.setStreetAddress(streetAddress);
+
+            System.out.print("Email:                ");
+            String email = scanner.nextLine();
+            newContact.setEmail(email);
+
+            System.out.print("Phone Number:         ");
+            String phone = scanner.nextLine();
+            newContact.setPhone(phone);
+
+            System.out.print("Notes:                ");
+            String notes = scanner.nextLine();
+            newContact.setNotes(notes);
+
+            System.out.println("");
+            return newContact;
+        }
     }
 
     /**
@@ -45,13 +86,16 @@ class ContactList {
      * sorting is case insensitive.
      */
     public String toString() {
-     // add sort()
-        return "";
+        String allcontacts = "";
+        for (int i = 0; i < contacts.size(); i++) {
+            allcontacts += contacts.get(i);
+        }
+        return allcontacts;
     }
 
     /**
      * Retrieves a person's information by last name. The search is case
-     * insensitive. Prompts the user if there is no such last name. Otherwise
+     * insensitive. Tells the user if there is no such last name. Otherwise
      * returns a String containing contacts with that last name.
      */
     public String searchByLastName(String lastName) {

@@ -1,5 +1,6 @@
 
 import java.io.Serializable;
+import java.util.Scanner;
 
 /**
  * In memory representation of a contact of an individual, which contains
@@ -14,13 +15,15 @@ public class Contact implements Comparable<Contact>, Serializable {
     private String email;
     private String phone;
     private String notes;
+    private Scanner scanner;
 
     /**
      * Default Constructor for Contact.
      */
     public Contact() {
+        scanner = new Scanner(System.in);
     }
-    
+
     /**
      * Constructor for Contact with only one parameter lastName.
      */
@@ -32,24 +35,14 @@ public class Contact implements Comparable<Contact>, Serializable {
      * Parameterized Constructor for Contact with all parameters.
      */
     public Contact(String firstName, String lastName, String streetAddress,
-        String email, String phone, String notes) { 
-        this.firstName = firstName; 
-        this.lastName = lastName; 
-        this.streetAddress = streetAddress; 
-        this.email = email; 
-        this.phone = phone; 
-        this.notes = notes; 
-    }   
-
-    // Sets the first name of this contact.
-    public void setFirstName(String firstName) {
+                   String email, String phone, String notes) { 
         this.firstName = firstName;
-    }
-
-    // Return the first name of this contact.
-    public String getFirstName() {
-        return firstName;
-    }
+        this.lastName = lastName;
+        this.streetAddress = streetAddress;
+        this.email = email;
+        this.phone = phone;
+        this.notes = notes;
+    } 
 
     // Sets the last name of this contact.
     public void setLastName(String lastName) {
@@ -59,6 +52,16 @@ public class Contact implements Comparable<Contact>, Serializable {
     // Returns the last name of this contact.
     public String getLastName() {
         return lastName;
+    }
+
+    // Sets the first name of this contact.
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    // Return the first name of this contact.
+    public String getFirstName() {
+        return firstName;
     }
 
     // Sets the street address of this contact.
@@ -109,9 +112,9 @@ public class Contact implements Comparable<Contact>, Serializable {
                + "Address:              " + streetAddress + "\n"
                + "Email:                " + email + "\n" 
                + "Phone Number:         " + phone + "\n"
-               + "Notes:                " + notes + "\n";            
+               + "Notes:                " + notes + "\n" 
+               + "++++++++++++++++++++++++++++++++++++++++++++++++++" + "\n";            
     }
-    
     
     /**
      * Compares the last names of two contacts for order. If their last names

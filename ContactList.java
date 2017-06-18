@@ -1,3 +1,5 @@
+package Task3;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -50,12 +52,19 @@ class ContactList {
         System.out.print("Please enter the following information:" 
                          + "\nLast Name (required): ");
         String lastName = scanner.nextLine();
-        String testLastName = lastName.replaceAll(" ", "");
+        
+        // Omits all white spaces
+        String testLastName = lastName.trim();  
+        
+        // Asks user to enter last name if it is left blank.
         if (testLastName.isEmpty()) {
-            System.out.println("\n*** Your contact cannot be saved without a last name ***\n\n\n");
-            return null;
+            System.out.println("*** Last name is required ***\n\n");
+            return readEntry();
         } else {
+            
+            // Constructs a Contact object to store the user input.
             Contact newContact = new Contact(lastName);
+            
             System.out.print("First Name:           ");
             String firstName = scanner.nextLine();
             newContact.setFirstName(firstName);

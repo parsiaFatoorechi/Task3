@@ -1,6 +1,5 @@
 
 import java.io.Serializable;
-import java.util.Scanner;
 
 /**
  * In memory representation of a contact of an individual, which contains
@@ -15,7 +14,6 @@ public class Contact implements Comparable<Contact>, Serializable {
     private String email;
     private String phone;
     private String notes;
-    private Scanner scanner;
 
     /**
      * Default Constructor for Contact.

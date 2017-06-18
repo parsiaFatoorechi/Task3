@@ -1,3 +1,4 @@
+package Task3;
 import java.util.ArrayList;
 
 /**
@@ -19,7 +20,7 @@ public class TestUseCase1 {
         for (int i = 0; i < 2; i++) {
             Contact contact = contactList.readEntry();
             contactList.addContact(contact);
-            System.out.println("=== Contact List === \n" 
+            System.out.println("====== Contact List ====== \n" 
                                + contactList 
                                + "=== End of Contact list === \n\n");
         }
@@ -32,42 +33,53 @@ public class TestUseCase1 {
 Please enter the following information:
 Last Name (required): Lee
 First Name:           Florence
-Address:              12345, Los Altos, CA
+Address:              12345 El Monte Rd, Los Altos, CA
 Email:                
-Phone Number:         650-123-8405
+Phone Number:         650-123-8888
 Notes:                
 
-=== Contact List === 
+====== Contact List ====== 
 Name:                 Lee, Florence
-Address:              12345, Los Altos, CA
+Address:              12345 El Monte Rd, Los Altos, CA
 Email:                
-Phone Number:         650-123-8405
+Phone Number:         650-123-8888
 Notes:                
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 === End of Contact list === 
 
 
 Please enter the following information:
+Last Name (required): 
+*** Last name is required ***
+
+
+Please enter the following information:
+Last Name (required): 
+*** Last name is required ***
+
+
+Please enter the following information:
 Last Name (required): James
 First Name:           David
-Address:              30 Buttercup Street, Mountain View, CA
+Address:              30 Buttercup St, Mountain View, CA
 Email:                Davidj@gmail.com
-Phone Number:         
-Notes:                His birthday is on June 20. 
+Phone Number:         650-949-7313
+Notes:                His birthday is June 20. 
 
-=== Contact List === 
+====== Contact List ====== 
 Name:                 Lee, Florence
-Address:              12345, Los Altos, CA
+Address:              12345 El Monte Rd, Los Altos, CA
 Email:                
-Phone Number:         650-123-8405
+Phone Number:         650-123-8888
 Notes:                
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 Name:                 James, David
-Address:              30 Buttercup Street, Mountain View, CA
+Address:              30 Buttercup St, Mountain View, CA
 Email:                Davidj@gmail.com
-Phone Number:         
-Notes:                His birthday is on June 20. 
+Phone Number:         650-949-7313
+Notes:                His birthday is June 20. 
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 === End of Contact list === 
+
 
  */

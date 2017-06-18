@@ -19,7 +19,6 @@ public class Contact implements Comparable<Contact>, Serializable {
      * Default Constructor for Contact.
      */
     public Contact() {
-        scanner = new Scanner(System.in);
     }
 
     /**

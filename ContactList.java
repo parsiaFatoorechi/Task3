@@ -40,9 +40,7 @@ class ContactList {
      * Add a new Contact object to the ContactList.
      */
     public void addContact(Contact newContact) {
-        if (newContact != null) {
-            contacts.add(newContact);
-        }
+        contacts.add(newContact);
     }
 
     /**

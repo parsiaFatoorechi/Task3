@@ -1,6 +1,11 @@
 Contact List Found: Loaded
-Enter the associated # to pick a task from the menu.
-Would you like to: 1. Create Contact, 2. Search Contacts, 3. Print Contacts, or 4. Exit the program?
+
+Would you like to: 
+[1] Create Contact
+[2] Search Contacts
+[3] Print Contacts
+[4] Exit the program
+
 1
 Please enter a last name (required):
 Maier
@@ -15,14 +20,22 @@ Please enter a phone number:
 Please enter any notes about this contact:
 This is one of my group members.  His birthday is January 15 and he has no food allergies.
 Contact Saved
-Would you like to: 1. Create Contact, 2. Search Contacts, 3. Print Contacts, or 4. Exit the program?
+Would you like to: 
+[1] Create Contact
+[2] Search Contacts
+[3] Print Contacts
+[4] Exit the program
 1
 Please enter a last name (required):
  
 Your contact cannot be saved without a last name, would you like to enter a last name Yes|No?
 No
 Contact creation canceled!: -No last name 
-Would you like to: 1. Create Contact, 2. Search Contacts, 3. Print Contacts, or 4. Exit the program?
+Would you like to: 
+[1] Create Contact
+[2] Search Contacts
+[3] Print Contacts
+[4] Exit the program
 3
 ++++++++++++++++++++++++++++++++
 Name: Maclean, Bob
@@ -43,7 +56,11 @@ Email: brimo1992@gmail.com
 Phone#: 650-315-7177
 Notes: This is one of my group members.  His birthday is January 15 and he has no food allergies.
 ====== End of Contact List ======
-Would you like to: 1. Create Contact, 2. Search Contacts, 3. Print Contacts, or 4. Exit the program?
+Would you like to: 
+[1] Create Contact
+[2] Search Contacts
+[3] Print Contacts
+[4] Exit the program
 2
 Search by last name:
 Maclean
@@ -60,11 +77,19 @@ Email: juliemcln@zombie.com
 Phone#: 650-384-8821
 Notes: Professional Florist.
 ====== 2 Contacts Found ======
-Would you like to: 1. Create Contact, 2. Search Contacts, 3. Print Contacts, or 4. Exit the program?
+Would you like to: 
+[1] Create Contact
+[2] Search Contacts
+[3] Print Contacts
+[4] Exit the program
 2
 Search by last name:
 Maple
 ====== 0 Contacts Found ======
-Would you like to: 1. Create Contact, 2. Search Contacts, 3. Print Contacts, or 4. Exit the program?
+Would you like to: 
+[1] Create Contact
+[2] Search Contacts
+[3] Print Contacts
+[4] Exit the program
 4
 Contact List Saved: See you next time!

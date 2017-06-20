@@ -64,6 +64,7 @@ Would you like to:
 2
 Search by last name:
 Maclean
+====== 2 Contacts Found ======
 ++++++++++++++++++++++++++++++++
 Name: Maclean, Bob
 Address: 15 Baker Street, Chico, CA
@@ -76,7 +77,7 @@ Address: 15 Baker Street, Chico, CA
 Email: juliemcln@zombie.com
 Phone#: 650-384-8821
 Notes: Professional Florist.
-====== 2 Contacts Found ======
+====== End of Contact List ======
 Would you like to: 
 [1] Create Contact
 [2] Search Contacts
